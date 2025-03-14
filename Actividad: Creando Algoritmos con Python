@@ -1,0 +1,157 @@
+#El Roboot Parlanchín
+Robot_Usuario = input ("Escribe")
+
+if Robot_Usuario == "hola":
+    print("hola humano")
+elif Robot_Usuario == "adios":
+    print("Hasta luego, Terrícola")
+else:
+    print("No entiendo, intenta de nuevo")
+
+
+
+#Piedra, Papel o Tijera
+import random
+Juego = ["piedra", "papel", "tijera"]
+random.choice(Juego)
+if Juego == "piedra":
+    print("vence a tijera")
+elif Juego == "papel":
+    print("vence a piedra")
+elif Juego == "tijera":
+    print("vence a papel")
+
+
+
+
+#¿Eres mayor de Edad?
+Acceso = int(input ("introduce tu edad"))
+if Acceso < 18:
+    print("Lo siento, no puedes entrar")
+elif Acceso == 18 :
+    print("Puedes entrar, pero sin bebidas alcoholicas")
+elif Acceso == 19 :
+      print("Puedes entrar, pero sin bebidas alcoholicas")
+elif Acceso == 20 :
+    print("Puedes entrar, pero sin bebidas alcoholicas")
+elif Acceso == 21 :
+    print("Puedes entrar, pero sin bebidas alcoholicas")
+elif Acceso > 21:
+    print("Bienvenido")
+
+
+
+
+#Calculadora de Propinas
+Total_Cuenta = int(input("Total de la cuenta"))
+Porcentaje = int(input("Total porcentaje propinas"))
+print(Total_Cuenta * (Porcentaje/100) + Total_Cuenta)
+
+
+
+
+
+#Contador de Palabras Mágico
+Palabra_Usuario = str(input("Ingrese palabra deseada"))
+contador=0
+for i in Palabra_Usuario:
+    contador+=1
+print("Mi frase tiene", contador, "letras" )
+
+
+
+
+
+#Calculadora de Edad de Mascotas
+Edad_Humano = int(input("Ingrese su Edad"))
+Gustos = str(input("Escriba si prefiere gatos o perros"))
+Gato = 5
+Perro = 7
+if Gustos == "gatos":
+    print("Tiene", Edad_Humano * Gato, "años gatunos")
+elif Gustos == "perros":
+    print("Tiene", Edad_Humano * Perro, "años perrunos")
+else:
+    print("Vamos, intentalo de nuevo")
+
+
+
+
+
+#La Maquinita de Chistes
+#Tuve problemas con la funcion randon, no importaba los datos de la "Lista"
+import random
+
+Lista = ["Hijo: Papá que es ¿el humor negro?, Papá:¿ves ése hombre sin brazos?.Dile que aplauda Hijo:pero papá soy ciego, Papá:exacto",
+"Que tienen en común la lasaña y las torres gemelas? que entre pisos hay carne molida",
+"En ucrania, te lo pasas bomba"]
+Busqueda = str(input("Escribe Enter: "))
+
+contador = Busqueda
+while contador == "enter":
+    Chiste = input("ingresa numero favorito del chiste; ")
+    Lista.append(Chiste)
+    contador+= 1
+    
+    Chiste_asignado = random.randint(0, len(Lista) -1)
+    
+    Chiste02 = Lista["aleatorio"]
+    print(Chiste02)
+
+
+
+
+
+
+#Reto Final: El Juego del Código Secreto
+codigo_enigma = {"Problemas a Resolver": "5 ejercicios", 
+"Ej1":"60 * 5 /10", 
+"Ej2":"80 + 80 * 5", 
+"Ej3": "50 * 4 - 100", 
+"Ej4": "100 * 10 + 500", 
+"EJ5":"9 * 9 + 200 - 250"
+}
+print(codigo_enigma)
+
+Re = {'A': 60 * 5 /10, 'B': 80 + 80 * 5, 'C': 50 * 4 - 100, 'D': 100 * 10 + 500, 'E': 9 * 9 + 200 - 250}
+for IA in Re.values():
+    print(IA)
+
+
+Resuelve01 = (int(input("Ingrese Respuestas EJ1: ")))
+Resuelve02 = (int(input("Ingrese Respuestas EJ2: ")))
+Resuelve03 = (int(input("Ingrese Respuestas EJ3: ")))
+Resuelve04 = (int(input("Ingrese Respuestas EJ4: ")))
+Resuelve05 = (int(input("Ingrese Respuestas EJ5: ")))
+
+if Resuelve01 == 30.0:
+    print("acertaste EJ1")
+elif Resuelve01 < 30.0 or Resuelve01 > 30.0:
+    print("No acertaste EJ1")
+
+if Resuelve02 == 480:
+    print("acertaste EJ2")
+elif Resuelve02 < 480 or Resuelve02 > 480:
+    print("No acertaste EJ2")
+
+if Resuelve03 == 100:
+    print("acertaste EJ3")
+elif Resuelve03 < 100 or Resuelve03 > 100:
+    print("No acertaste EJ3")
+
+if Resuelve04 == 1500:
+    print("acertaste EJ4")
+elif Resuelve04 < 1500 or Resuelve04 > 1500:
+    print("No acertaste EJ4")
+
+if Resuelve05 == 31:
+    print("acertaste EJ5")
+elif Resuelve05 < 31 or Resuelve05 > 31:
+    print("No acertaste EJ5")
+
+Resultados = Resuelve01+Resuelve02+Resuelve03+Resuelve04+Resuelve05
+
+if Resultados == 2141:
+    print("Código Descifrado")
+elif Resultados < 2141 or Resultados > 2141:
+    print("Acceso Denegado")

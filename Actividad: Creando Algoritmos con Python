@@ -1,8 +1,8 @@
 #El Roboot Parlanchín
-Robot_Usuario = input ("Escribe")
+Robot_Usuario = input("Escribe")
 
 if Robot_Usuario == "hola":
-    print("hola humano")
+    print("hola Humano")
 elif Robot_Usuario == "adios":
     print("Hasta luego, Terrícola")
 else:
@@ -11,15 +11,19 @@ else:
 
 
 #Piedra, Papel o Tijera
-import random
-Juego = ["piedra", "papel", "tijera"]
-random.choice(Juego)
-if Juego == "piedra":
-    print("vence a tijera")
-elif Juego == "papel":
-    print("vence a piedra")
-elif Juego == "tijera":
-    print("vence a papel")
+import random 
+Prueba = ["piedra", "papel", "tijera"]
+random.choice(Prueba)
+
+Decisión = input("Escoja piedra, papel o tijera ")
+print(random.choice(Prueba))
+
+if Decisión == "piedra":
+     print("vence a tijera y empata con piedra")
+elif Decisión == "papel":
+     print("vence a piedra y empata con papel")
+elif Decisión == "tijera":
+     print("vence a papel y empata con tijera")
 
 
 
@@ -41,12 +45,10 @@ elif Acceso > 21:
 
 
 
-
 #Calculadora de Propinas
 Total_Cuenta = int(input("Total de la cuenta"))
 Porcentaje = int(input("Total porcentaje propinas"))
 print(Total_Cuenta * (Porcentaje/100) + Total_Cuenta)
-
 
 
 
@@ -60,11 +62,9 @@ print("Mi frase tiene", contador, "letras" )
 
 
 
-
-
 #Calculadora de Edad de Mascotas
-Edad_Humano = int(input("Ingrese su Edad"))
-Gustos = str(input("Escriba si prefiere gatos o perros"))
+Edad_Humano = int(input("Ingrese su Edad "))
+Gustos = input("Escriba si prefiere gatos o perros ")
 Gato = 5
 Perro = 7
 if Gustos == "gatos":
@@ -77,28 +77,20 @@ else:
 
 
 
-
 #La Maquinita de Chistes
-#Tuve problemas con la funcion randon, no importaba los datos de la "Lista"
 import random
 
 Lista = ["Hijo: Papá que es ¿el humor negro?, Papá:¿ves ése hombre sin brazos?.Dile que aplauda Hijo:pero papá soy ciego, Papá:exacto",
 "Que tienen en común la lasaña y las torres gemelas? que entre pisos hay carne molida",
 "En ucrania, te lo pasas bomba"]
-Busqueda = str(input("Escribe Enter: "))
 
-contador = Busqueda
-while contador == "enter":
-    Chiste = input("ingresa numero favorito del chiste; ")
-    Lista.append(Chiste)
-    contador+= 1
-    
-    Chiste_asignado = random.randint(0, len(Lista) -1)
-    
-    Chiste02 = Lista["aleatorio"]
-    print(Chiste02)
+Risa = input("Escribe Enter y tendras risas culposas gratuita ")
+random.choice(Lista)
 
-
+if Risa == "enter":
+    print(random.choice(Lista))
+else:
+    print("Vuelve a intentarlo ")
 
 
 
